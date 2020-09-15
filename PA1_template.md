@@ -1,9 +1,6 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+
+Reproducible Research: Peer Assessment 1
+=================================================
 
 
 
@@ -60,7 +57,7 @@ hist(stepsByDay$steps,
      )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -111,7 +108,7 @@ with(stepsByInterval,
 grid()
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -172,7 +169,7 @@ hist(
     )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
 
 - Mean
 
@@ -226,10 +223,10 @@ with(
         
     ## Plot weekend stats with legend, grid and axis on right side
     plot(steps[dayofweek == "weekend"] ~ interval[dayofweek == "weekend"], type="l", 
-         lwd=2, ylab="", xlab="", col="mediumslateblue", xaxt='n', yaxt="n")
+         lwd=2, ylab="", xlab="", col="chocolate1", xaxt='n', yaxt="n")
     legend("topright",
            c("weekend", "weekday"), 
-           col=c("mediumslateblue","firebrick3"),
+           col=c("chocolate1","chartreuse"),
            bty="n",
            lwd=2)
     axis(side=4)
@@ -237,7 +234,7 @@ with(
     
     ## Plot weekday stats with grid
     plot( steps[dayofweek == "weekday"] ~ interval[dayofweek == "weekday"], type="l", 
-          lwd=2, xlab="Interval (5 Min)", ylab="", col="firebrick3")
+          lwd=2, xlab="Interval (5 Min)", ylab="", col="chartreuse")
     grid()
     
     ## Plot figure labels
@@ -250,4 +247,4 @@ with(
 )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png)
